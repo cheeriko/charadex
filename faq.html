@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- About Your Site                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Website's icon in the browser -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- Title of your site -->
+  <title>Charadex</title>
+
+  <!-- Description of your site -->
+  <meta name="description" content="An automated masterlist for your species!">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Styles                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:400" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a3d06f1529.js" crossorigin="anonymous"></script> <!-- switch -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.css">
+  <link rel="stylesheet" href="styles/charadex.css" />
+
+</head>
+<body class="body">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Navbar                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <nav class="nav" data-include="header"></nav>
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Body                                                              -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <div class="container-lg">
+    <div class="row" style="min-height: calc(100vh - 50px)">
+      <div class="col-md-3 order-1 sidebar">
+        <div class="h-100 p-5 bg-faded" data-include="sidenav"></div>
+      </div>
+      <div class="col-md information">
+        <h2 class="text-primary">FAQ</h2>
+        <div class="pl-5 mb-5">
+          <b>How many characters can this baby hold?</b>
+          <blockquote class="mb-4 text-muted">
+            <p>I've tested this with a sheet with about 5000+ entries and it still worked - although load times are slow especially if you're using large images.</p>
+            <p>If you <i>do</i> have that many entries though, I would really recommend having an actual site and database.</p>
+          </blockquote>
+        </div>
+        <div class="pl-5 mb-5">
+          <b>Will you set this up for me?</b>
+          <blockquote class="mb-4 text-muted">
+            <p>Sorry, unfortunately I have no time right now :'3c</p>
+          </blockquote>
+        </div>
+        <div class="pl-5 mb-5">
+          <b>Where should I host images?</b>
+          <blockquote class="mb-4 text-muted">
+            <p>You can host them on your site (but that will require you to give permission to mods to add images). You <i>can</i> use imgur, discord, toyhou.se, etc, but if you draw too many views you might get slapped on the wrist.</p>
+            <p>Unfortunately I don't really have a concrete answer, and that's really all up to you.</p>
+          </blockquote>
+        </div>
+        <div class="pl-5 mb-5">
+          <b>Are unwatermarked images safe on here?</b>
+          <blockquote class="mb-4 text-muted">
+            <p>No, any image posted without a watermark (or hell, with one in some case) is not safe on the internet ever.</p>
+            <p>I've disabled right clicking on images but there's a bunch of ways to get past this - the best thing for you to do is either make your own thumbnails or slap a big watermark on the images. Or both.</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="styles/charadex.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- About Your Site                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Website's icon in the browser -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+  <!-- Title of your site -->
+  <title>Charadex</title>
+
+  <!-- Description of your site -->
+  <meta name="description" content="An automated masterlist for your species!">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Styles                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:400" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a3d06f1529.js" crossorigin="anonymous"></script> <!-- switch -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.css">
+  <link rel="stylesheet" href="styles/charadex.css" />
+
+</head>
+
+<body class="body">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Navbar                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <nav class="nav" data-include="header"></nav>
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Body                                                              -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <div class="container-lg">
+    <div class="row" style="min-height: calc(100vh - 50px)">
+      <div class="col-md-3 order-1 sidebar">
+        <div class="h-100 p-5 bg-faded" data-include="sidenav"></div>
+      </div>
+      <div class="col-md information">
+        <h2 class="text-primary">Using the Database</h2>
+        <div class="pl-5">
+          <p>Now that you're set up, it's time to learn about the database and how to customize it! We're going to start
+            off with the basics but eventually I'll even explain the formulas we're using (to the best of my abilities).
+          </p>
+        </div>
+        <hr>
+        <h3 class="text-primary">Sheet Anatomy</h3>
+        <div class="pl-5 mb-5">
+          <p>This is a basic run down of the sheet and it's parts. You can skip a majority of it and come back later
+            when you have everything set up and ready to go.</p>
+        </div>
+        <h4>Options</h4>
+        <div class="pl-5 mb-5">
+          <p>This allows you to change a few things, such as the filler MYO image and the ID prefix, to better fit your
+            species and taste. Notes are added to the sheet for clarity, but you can remove all the text from them to
+            delete them if they're getting in the way.</p>
+        </div>
+        <h4>Log</h4>
+        <div class="pl-5 mb-5">
+          <p>The log you'll be inputting info into.</p>
+          <ul>
+            <li><code>Transaction ID</code> - This automatically adds a transaction number to your new entry.</li>
+            <li><code>ID</code> - If you're logging a new design, you leave this empty. But if you're logging a
+              transaction, make sure to fill in the ID so it updates the ML Entry!</li>
+            <li><code>ID Update</code> - Image of the design, leave empty if no design.</li>
+            <li><code>Image</code> - Image of the design, leave empty if no design.</li>
+            <li><code>Owner</code> - Owner of design at time of logging.</li>
+            <li><code>Artist</code> - Artist of image.</li>
+            <li><code>Designer</code> - Designer of design.</li>
+            <li><code>Worth</code> - Design's worth.</li>
+            <li><code>Status</code> - Whether it's okay to resale, trade, or gift a design - or if the design is voided.
+            </li>
+            <li><code>Cooldown</code> - Designs can be traded after this date. Small warnings will pop up in these
+              cells, don't worry about them, the sheet is working as intended.</li>
+            <li><code>Design Type</code> - Type of design.</li>
+            <li><code>Transaction Type</code> - If it's a new entry or a traded design, etc.</li>
+            <li><code>Notes</code> - Any extra notes about the design. These will be overwritten if you update them so
+              stay frosty!</li>
+            <li><code>Proof</code> - Proof of transaction.</li>
+          </ul>
+        </div>
+        <div class="card bg-faded p-5 mb-5 border-primary">
+          <h4 class="text-primary"><i class="fal fa-exclamation-circle fa-fw"></i> Some Warnings</h4>
+          <blockquote class="text-muted">
+            <p>Log entries should not be deleted. This will shift everything on the list.</p>
+            <p>Every new transaction should be logged - I do not recommend going back to the original entry and trying
+              to edit in an owner or something.</p>
+            <p>I do not recommend logging URLs in Owner, Artist, & Designer. The JS on the site won't read it if it's
+              hotlinked, and it looks bad as a regular link. You also can't log multiple people this way.</p>
+            <p><b>Do not move the ID or Image cells!</b> Unless you know what you're doing and know how to customize the site JS too, this will break everything.</p>
+            <p>Adding more images will require knowledge of JS and List.js to show them on site.</p>
+          </blockquote>
+        </div>
+        <h4>Masterlist</h4>
+        <div class="pl-5 mb-5">
+          <p>This is the final conglomerate of the logs, and the sheet you'll be pulling information from.</p>
+          <p>You'll only need to edit this sheet if you're adding traits.</p>
+        </div>
+        <hr>
+        <h3 class="text-primary mb-5">Adding an Entry</h3>
+        <img
+          src="images/newentry.gif">
+        <div class="my-5">
+          <p><b>Step One:</b> Right click on row 2 and then click Insert 1 Above.</p>
+          <p><b>Step Two:</b> Add information. If it's a new entry, leave <code>Updated ID</code> blank. If you're
+            updating, make sure to write out the ID.</p>
+          <p><b>Step Three:</b> You're done! But make sure to check the bank once you're done in case something doesn't
+            look right.</p>
+        </div>
+        <hr>
+        <h3 class="text-primary mb-5">Changing Usernames</h3>
+        <img
+          src="images/replacename.gif">
+        <div class="my-5">
+          <p><b>Step One:</b> In the log, press <code>CTRL + F</code> and then type in the old username.</p>
+          <p><b>Step Two:</b> Press the button with 3 dots and enter the Replace with portion with the new username.</p>
+          <p><b>Step Three:</b> Press Replace all and you're done!</p>
+        </div>
+        <hr>
+        <h3 class="text-primary mb-5">Adding Traits (to the Sheet Only)</h3>
+        <img src="images/newtrait1.gif">
+        <div class="my-5">
+          <p><b>Step One:</b> Make the trait row in the Log table, I recommend putting it after <u>Designer</u>.</p>
+        </div>
+        <img src="images/newtrait2.gif">
+        <div class="my-5">
+          <p><b>Step Two:</b> Make the same rows in the Masterlist table.</p>
+          <p><b>Step Three:</b> Click any of the headers that are <b>not</b> ID or Image. Press <code>ctrl + c</code> to
+            copy, THIS IS IMPORTANT. Do <b>not</b> just copy the formula from the formula bar.</p>
+          <p><b>Step Four:</b> Click on any of the new trait row headers and press <code>ctrl + v</code>. This will
+              paste the formula and automatically change the referenced cells so you don't have to change anything in the
+              formula.</p>
+        </div>
+        <div class="card bg-faded p-5 mb-5 border-primary">
+          <h4 class="text-primary"><i class="fal fa-exclamation-circle fa-fw"></i> Note</h4>
+          <blockquote class="text-muted">
+            <p>If you want to show these on the site, you'll need to edit the HTML in there as well. Please head <a
+                href="site_setup.html">here</a> for more info.</p>
+          </blockquote>
+        </div>
+        <hr>
+        <h3 class="text-primary mb-5">About the Main Formula</h3>
+        <div class="pl-5 mb-5">
+          <p>You don't have to know anything about formulas, the entire sheet should work automagically. This is just
+            for people who want to know how the formulas work in case they want to build something themselves.</p>
+          <p>I am going to explain this stuff to the best of my abilities, but I'm not a very good teacher and these
+            concepts are definitely confusing to think about on their own - so I'm sorry if anything is confusing.</p>
+          <p>I am only explaining the main formula used - it should give you a good base.</p>
+          <p>Please hover over parts for more information!</p>
+        </div>
+        <pre class="pl-5"><span class="tooltip" data-tooltip="This makes the formula actually work, instead of printing it as plain text">=</span>{
+<span class="tooltip" data-tooltip="This calls the header name from the cell we're referencing in Log. In this case, we're calling 'Owner'.">Log!C1;</span>
+<span class="tooltip" data-tooltip="This forces the formula to fill all of the cells instead of just 1.">arrayformula</span>(
+  <span class="tooltip" data-tooltip="If formulas work like so: if(statement is true, make true thing happen, else make false thing happen)">if</span>(
+    <span class="tooltip" data-tooltip="This is checks to see if any id cells in masterlist are blank, if they are, it'll return 'True'">ISBLANK</span>(<span class="tooltip" data-tooltip="Offset is a hard concept to explain, though it's relatively simple. Please look it up for more info!">OFFSET</span>(<span class="tooltip" data-tooltip="$ symbols force the formula to reference the same cell.">$A:$A</span>,1,0)),
+      ,
+      <span class="tooltip" data-tooltip="This works a bit like if statements, except it's only checking for errors. In this case, it means 'If this first statement doesn't work, then use the next statement instead.'">IFERROR</span>(
+        <span class="tooltip" data-tooltip="This is used to filter through the data from the Log and pull said data when it matches the Masterlist ID.">VLOOKUP</span>(
+          <span class="tooltip" data-tooltip="This is referencing the IDs in the Masterlist sheet.">OFFSET($A:$A,1,0)</span>,
+          <span class="tooltip mr-3" data-tooltip="This statement is the one being filtered through so we can add a new owner if there is one."><i class="fal fa-exclamation-circle"></i></span><span class="tooltip" data-tooltip="Filter just filters through data based on statements. In this case, it's filtering through Update IDs to Owners if the ID cells aren't empty">filter(OFFSET(Log!$B:C,1,0), not(isblank(OFFSET(Log!C:C,1,0))))</span>,
+          <span class="tooltip" data-tooltip="This counts how many cells there are between updated ids and ownership. This number is needed so that vlookup knows which row to pull from. (In this case, it's the 3rd row from updated IDS, owners)">COUNTA(Log!$B1:C1)</span>,
+          <span class="tooltip" data-tooltip="This forces vlookup to exactly match the masterlist ids - so it won't accidentally pull data from a similar id">FALSE</span>
+        ),
+        <span class="tooltip" data-tooltip="This is the backup formula - it works exactly like the last one except it's pulling any info it sees.">VLOOKUP(OFFSET($A:$A,1,0),OFFSET(Log!$A:C,1,0),COUNTA(Log!$A1:C1),FALSE)</span>
+      )
+    )
+  )
+}</pre>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="styles/charadex.js"></script>
+
+</body>
+
+</html>

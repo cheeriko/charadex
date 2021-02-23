@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- About Your Site                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Website's icon in the browser -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- Title of your site -->
+  <title>Charadex</title>
+
+  <!-- Description of your site -->
+  <meta name="description" content="An automated masterlist for your species!">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Styles                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:400" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a3d06f1529.js" crossorigin="anonymous"></script> <!-- switch -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.css">
+  <link rel="stylesheet" href="styles/charadex.css" />
+
+</head>
+<body class="body">
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Navbar                                                            -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <nav class="nav" data-include="header"></nav>
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Body                                                              -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <div class="container-lg">
+    <div class="row" style="min-height: calc(100vh - 50px)">
+      <div class="col-md-3 order-1 sidebar">
+        <div class="h-100 p-5 bg-faded" data-include="sidenav"></div>
+      </div>
+      <div class="col-md information">
+        <h2 class="text-primary mb-5">Changelog</h2>
+        <div class="pl-5">
+          <h4>v3.5 || Ultimate Edition </h4>
+          <ul class="text-muted">
+            <li>Completely redid everything. Because I'm nuts.</li>
+            <li>Switched to list.js instead of pagination.js.</li>
+            <li>Added a nicer pagination and added the ability to search.</li>
+            <li>Simplified the google sheet, hopefully this helps keeps older/slower computers from dying.</li>
+            <li>HTML for the general masterlist and cards can now be edited in the HTML page, instead of in the JS.</li>
+            <li><i class="fal fa-star"></i> Added the ability to add more info!! Like traits and junk.</li>
+            <li>Died.</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="pl-5">
+          <h4>v2.0 || General Updates and QOL Fixes </h4>
+          <ul class="text-muted">
+            <li>Consolidated the JS for the pages.</li>
+            <li>Added single cards you can link to and get the info.</li>
+            <li>Added loading page.</li>
+            <li>YOU DO NOT NEED TO UPDATE THE INDEX FILE! Just the JS and CSS.</li>
+          </ul>
+          <blockquote class="text-muted">
+            All updates have been tested in major browsers, but I can't guarantee they'll work in lesser known browsers.
+          </blockquote>
+        </div>
+        <hr>
+        <div class="pl-5">
+          <h4>v1.0 || Launch</h4>
+          <ul class="text-muted">
+            <li>I didn't keep a changlog up to this point so this is where we will Begin.</li>
+            <li>Added changelog</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="styles/charadex.js"></script>
+
+</body>
+</html>

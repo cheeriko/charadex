@@ -1,0 +1,201 @@
+/*
+
+  This only styles the elements shown on the page.
+
+  Some CSS knowledge is going to be needed to style these elements
+  further. If you're just looking for a swatch and font swap,
+  the variables below should be all you need to edit!
+
+*/
+:root {
+
+  /* Primary Color */
+  --ml-primary:                 #F2A68D;
+  --ml-primary-hover:           #d6866b;
+
+  /* Main Page Styles */
+  --ml-body-bg:                 #F9F4F0;
+  --ml-body-text:               #000;
+  --ml-body-image:              url();
+  --ml-borders:                 #D5D0CC;
+  --ml-border-radius:           1rem;
+
+  /* Navbar */
+  --ml-navbar-bg:               #000;
+  --ml-navbar-text:             rgba(255,255,255,.8);
+  --ml-navbar-text-hover:       var(--ml-primary);
+
+  /* Navbar Dropdown */
+  --ml-navbar-dd-bg-hover:      rgba(255,255,255,.1);
+  --ml-navbar-dd-divider:       rgba(255,255,255,.125);
+
+  /* Pagination */
+  --ml-page-link-color:         var(--ml-body-text);
+  --ml-page-link-color-hover:   var(--ml-primary);
+  --ml-page-link-bg:            transparent;
+  --ml-page-link-bg-hover:      transparent;
+  --ml-page-link-border:        transparent;
+
+  /* Cards */
+  --ml-card-bg:                 #fff;
+  --ml-card-border:             var(--ml-borders);
+  --ml-card-header-bg:          #f5f5f5;
+
+  /* Main Fonts */
+  --ml-body-font:               'Montserrat', sans-serif;
+  --ml-header-font:             'Comfortaa', sans-serif;
+}
+
+
+/* General Page Styles
+/* ========================================================== */
+body {
+
+  /* Global Text */
+  color: var(--ml-body-text);
+  font-family: var(--ml-body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Global Background */
+  background-color: var(--ml-body-bg);
+  background-image: var(--ml-body-image);
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+/* General Page Styles
+/* ========================================================== */
+a {
+  color: var(--ml-primary);
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+a:hover {
+  color: var(--ml-primary-hover);
+}
+
+
+/* Dropdowns
+/* ========================================================== */
+/* This is for navbar dropdowns only
+/* ========================================================== */
+.navbar .dropdown-menu {
+  color: var(--ml-navbar-text) !important;
+  background-color: var(--ml-navbar-bg) !important;
+  border: none;
+  border-radius: 0 0 var(--ml-border-radius) var(--ml-border-radius);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover{
+  display: block !important
+}
+
+.navbar .dropdown-divider {
+  border-top: var(--ml-navbar-dd-divider);
+}
+
+.navbar .dropdown-item,
+.navbar .dropdown-item-text {
+  color: var(--ml-navbar-text);
+  transition: background .2s ease-in-out;
+}
+
+.navbar .dropdown-item:hover, 
+.dropdown-item:focus,
+.dropdown-item:active {
+  color: var(--ml-navbar-text-hover) !important;
+  background-color: var(--ml-navbar-dd-bg-hover) !important;
+}
+
+.navbar .dropdown-header {
+  color: var(--ml-navbar-text-hover);
+}
+
+
+/* Navbar
+/* ========================================================== */
+.navbar {
+  background-color: var(--ml-navbar-bg) !important;
+  font-family: var(--ml-header-font);
+}
+
+.navbar .navbar-brand {
+  color: var(--ml-navbar-text-hover) !important;
+}
+
+.navbar .navbar-brand:hover, 
+.navbar .navbar-brand:focus {
+  color:var(--ml-primary) !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--ml-navbar-text) !important;
+}
+
+.navbar .navbar-nav .nav-link:hover, 
+.navbar .navbar-nav .nav-link:focus{
+  color: var(--ml-navbar-text-hover) !important;
+}
+
+.navbar .navbar-toggler {
+  color: var(--ml-navbar-text) !important;
+  border: none !important;
+}
+
+
+/* Pagination
+/* ========================================================== */
+.page-link,
+.page-item.disabled .page-link {
+  color: var(--ml-page-link-color);
+  background-color: var(--ml-page-link-bg);
+  border: 1px solid var(--ml-page-link-border);
+  padding: .25rem;
+}
+
+.page-item.active .page-link,
+.page-link:hover,
+.page-link:focus,
+.page-link:active {
+  color: var(--ml-page-link-color-hover);
+  background-color: var(--ml-page-link-bg-hover);
+  border-color: var(--ml-page-link-bg-hover);
+}
+
+/* Tiny Tweaks */
+.page-link{cursor: pointer;user-select: none;}
+.page-link:focus{box-shadow: none !important;}
+
+/* Footer
+/* ========================================================== */
+
+.footer{
+  background-color: var(--ml-navbar-bg) !important;
+  color: var(--ml-navbar-text) !important;
+}
+
+
+/* Card
+/* ========================================================== */
+
+.card {
+  background-color: var(--ml-card-bg) !important;
+  border-color: var(--ml-card-border) !important;
+  border-radius: var(--ml-border-radius);
+}
+
+.card-header {
+  background-color: var(--ml-card-header-bg) !important;
+  border-color: var(--ml-card-border) !important;
+  font-family: var(--ml-header-font);
+}
+
+.list-group-item {
+  background-color: var(--ml-card-bg) !important;
+  border-color: var(--ml-card-border) !important;
+}
