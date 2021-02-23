@@ -208,6 +208,7 @@ pre {
   overflow: visible;
   white-space: pre-wrap;
   padding: var(--spacer-4);
+  word-break: break-all;
 }
 
 pre>code {
